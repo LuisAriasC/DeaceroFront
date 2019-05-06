@@ -1,9 +1,17 @@
-runtime: nodejs
-env: flex
+runtime: nodejs8
 threadsafe: yes
 
 env_variables:
   API_KEY: AIzaSyB_7Bxcgo-mCy6RBP4V9HaADW0OYB90p6A
+
+handlers:
+  - url: /(.+)
+    static_files: dist/\1
+    upload: dist/(.*:wq)
+
+  - url: /
+    static_files: dist/index.html
+    upload: dist/index.html
 
 automatic_scaling:
   min_num_instances: 1
