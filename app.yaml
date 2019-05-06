@@ -12,6 +12,6 @@ handlers:
   - url: /
     static_dir: dist
 
-automatic_scaling:
-  min_instances: 1
-  max_instances: 4
+manual_scaling:
+  instances: 1
+#automatic_scaling:
