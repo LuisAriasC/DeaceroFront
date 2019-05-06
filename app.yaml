@@ -23,6 +23,5 @@ skip_files:
   - ^(.*/)?.*\.yaml$
   - ^LICENSE
 
-automatic_scaling:
-  min_total_instances: 1
-  max_total_instances: 4
+manual_scaling:
+  instances: 4
