@@ -1,0 +1,29 @@
+runtime: python27
+env: flex
+api_version: 1
+threadsafe: yes
+
+env_variables:
+  API_KEY: AIzaSyB_7Bxcgo-mCy6RBP4V9HaADW0OYB90p6A
+
+handlers:
+
+  - url: /
+    static_files: dist/index.html
+    upload: dist/index.html
+  - url: /
+    static_dir: dist
+
+skip_files:
+  - e2e/
+  - node_modules/
+  - src/
+  - ^(.*/)?\..*$
+  - ^(.*/)?.*\.json$
+  - ^(.*/)?.*\.md$
+  - ^(.*/)?.*\.yaml$
+  - ^LICENSE
+
+automatic_scaling:
+  min_instances: 1
+  max_instances: 4
