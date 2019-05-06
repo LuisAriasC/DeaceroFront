@@ -13,6 +13,11 @@ handlers:
   - url: /
     static_dir: dist
 
+skip_files:
+  - e2e/
+  - node_modules/
+  - src/
+  - ^LICENSE
 
 automatic_scaling:
   min_num_instances: 1
