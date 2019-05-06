@@ -1,27 +1,21 @@
-runtime: python27
-api_version: 1
+# [START runtime]
+runtime: python
+env: flex
 threadsafe: yes
+# [END runtime]
 
 env_variables:
   API_KEY: AIzaSyB_7Bxcgo-mCy6RBP4V9HaADW0OYB90p6A
 
 handlers:
-
-  - url: /
-    static_files: dist/index.html
-    upload: dist/index.html
-  - url: /
-    static_dir: dist
-
+- url: /(.+)
+  static_files: dist/\1
+  upload: dist/(.*)
+- url: /
+  static_files: dist/index.html
+  upload: dist/index.html
 skip_files:
-  - e2e/
-  - node_modules/
-  - src/
-  - ^(.*/)?\..*$
-  - ^(.*/)?.*\.json$
-  - ^(.*/)?.*\.md$
-  - ^(.*/)?.*\.yaml$
-  - ^LICENSE
+- ^(?!dist)  # Skip any files not in the dist folder
 
 manual_scaling:
-  instances: 4
+  instances: 2
