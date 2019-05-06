@@ -1,4 +1,4 @@
-runtime: python
+runtime: nodejs
 env: flex
 threadsafe: yes
 
