@@ -12,16 +12,6 @@ handlers:
   - url: /
     static_dir: dist
 
-skip_files:
-  - e2e/
-  - node_modules/
-  - src/
-  - ^(.*/)?\..*$
-  - ^(.*/)?.*\.json$
-  - ^(.*/)?.*\.md$
-  - ^(.*/)?.*\.yaml$
-  - ^LICENSE
-
 automatic_scaling:
   min_instances: 1
   max_instances: 4
