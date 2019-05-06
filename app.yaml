@@ -5,13 +5,6 @@ threadsafe: yes
 env_variables:
   API_KEY: AIzaSyB_7Bxcgo-mCy6RBP4V9HaADW0OYB90p6A
 
-handlers:
-  - url: /
-    static_files: dist/index.html
-    upload: dist/index.html
-  - url: /
-    static_dir: dist
-
 automatic_scaling:
   min_num_instances: 1
   max_num_instances: 4
