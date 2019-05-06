@@ -24,5 +24,5 @@ skip_files:
   - ^LICENSE
 
 automatic_scaling:
-  min_num_instances: 1
-  max_num_instances: 4
+  min_total_instances: 1
+  max_total_instances: 4
