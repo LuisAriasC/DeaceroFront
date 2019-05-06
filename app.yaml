@@ -1,4 +1,4 @@
-runtime: nodejs
+runtime: custom
 env: flex
 api_version: 2
 threadsafe: yes
